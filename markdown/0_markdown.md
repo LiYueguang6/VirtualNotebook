@@ -8,7 +8,7 @@
     5. [代码](5_代码code.md)
     6. [链接](6_链接link.md)
     7. [图片](7_图片picture.md)
-    8. [表格](8_图格graph.md)
+    8. [表格](8_表格graph.md)
     9. [高级技巧](9_高级技巧advancedskills.md)
     10. [数学](10_数学math.md)
     11. [参考](11_参考reference.md)
