@@ -32,4 +32,23 @@ innodb_io_capacity 增大后会影响一次刷盘的脏页page数量
 当CPU认为io空闲的时候或者脏页超过70%的时候，会刷新100%*innodb_io_capacity 的脏页
 其他情况刷新10%*innodb_io_capacity 的脏页
 刷新这个脏页的时候，数据库将停止所有工作，全力刷写，单次刷新太多脏页会引起数据库波动，博客都是在**降低**innodb_io_capacity **提高**稳定性，但是无法判断这个参数对吞吐量的影响
-个人理解在
+
+建议：
+
+1. 繁忙情况下需要稍微提高（默认值为200）
+2. 对于SSD这种高速存储不需要设置太高的值，以免出现波动，因为SSD的读写速度会很快，值设置太高以后
+
+|innodb_io_capacity|磁盘配置         |
+|---               |---             |
+|200               |单盘SAS/SATA    |
+|2000              |SAS*12  RAID  10|
+|5000              |SSD             |
+|50000             |FUSION-IO       |
+[表格出处](http://blog.sina.com.cn/s/blog_59dd20310102yinu.html)
+
+注：以上建议没有进行实测
+
+## 参考
+
+1. [调整刷新脏页处理innodb_io_capacity_任老石_新浪博客](http://blog.sina.com.cn/s/blog_59dd20310102yinu.html)
+2. [innodb之线程及IO相关参数介绍 - 烟雨楼人 - 博客园](https://www.cnblogs.com/lbg-database/p/10108436.html)
