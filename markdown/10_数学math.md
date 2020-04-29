@@ -15,14 +15,14 @@ $$\sum_{i=1}^n a_i=0$$
 
 ### 省略号
 ```
-$ a_1,a_2,\ldots,a_n$
-$ a_1+a_2+\ldots+a_n$
-$ a_1+a_2+\cdots+a_n$
+$a_1,a_2,\ldots,a_n$
+$a_1+a_2+\ldots+a_n$
+$a_1+a_2+\cdots+a_n$
 ```
 
-$ a_1,a_2,\ldots,a_n$
-$ a_1+a_2+\ldots+a_n$
-$ a_1+a_2+\cdots+a_n$
+$a_1,a_2,\ldots,a_n$  
+$a_1+a_2+\ldots+a_n$  
+$a_1+a_2+\cdots+a_n$
 
 
 ### 字体
@@ -32,31 +32,45 @@ $ \mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ} $
 $ \mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ} $
 $ \mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ} $
 ```
-$ \mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZ} $
-$ \mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ} $
-$ \mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ} $
-$ \mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ} $
+$\mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+$\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+$\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+$\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 
 ### 常用公式
 ```
 $x_i^2$，$x_i^2+x_{i^2}$，$10^{10}$
 $\log_2 x$
+
 ${x^y}^z+x^{y^z}$
+
 $\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$
+
 $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
+
 $f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $
+
 $\displaystyle \lim_{t \to 0} \int_t^1 f(t)\, dt$
+
 $\lim_{t \to 0} \int_t^1 f(t)\, dt$
 ```
 
-$x_i^2$，$x_i^2+x_{i^2}$，$10^{10}$
-$\log_2 x$
-${x^y}^z+x^{y^z}$
-$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$
-$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
-$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $
-$\displaystyle \lim_{t \to 0} \int_t^1 f(t)\, dt$
-$\lim_{t \to 0} \int_t^1 f(t)\, dt$
+$x_i^2$，$x_i^2+x_{i^2}$，$10^{10}$  
+
+$\log_2 x$  
+
+${x^y}^z+x^{y^z}$  
+
+$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$  
+
+$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$  
+
+$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2$  
+
+$\displaystyle \lim_{t \to 0} \int_t^1 f(t)\, dt$  
+
+$\lim_{t \to 0} \int_t^1 f(t)\, dt$  
+
 如果需要大小调整，大小写切换写
 
 ```
