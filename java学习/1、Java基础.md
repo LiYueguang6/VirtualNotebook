@@ -28,6 +28,8 @@ new Integer(123);和Integer.valueOf(123)的区别在于：
 * Integer.valueOf(123)会使用缓冲池中的对象。
 装箱过程中自动调用valueOf。
 
+引用同一个对象的包装类，==时相同，equals
+
 缓冲池大小： 
 boolean true false
 byte all
@@ -60,3 +62,9 @@ String s = "abc";
 ```
 
 这种方式创建的String，先去String Pool中匹配相应的对象，不存在则新建对象。
+
+## 三、==和equals
+
+==在基本类型中比较值，在对象中比较地址，包装类中比较引用值地址（根据缓冲池和创建方法有所不同）
+
+equals比较对象的引用，String重写了equals所以比较值。
