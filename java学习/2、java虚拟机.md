@@ -2,7 +2,8 @@
 
 ## 一、JavaSE结构图
 
-![图](Java&#32;SE结构图.png)
+![图](./Java SE结构图.png)
+
 * JRE：运行环境包
 * JDK：包括JRE，多了一些java工具api
 * JVM：在操作系统上运行java的虚拟机（实现了**跨平台**）
