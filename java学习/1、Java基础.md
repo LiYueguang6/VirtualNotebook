@@ -38,7 +38,7 @@ int -128~127
 char \u0000 to \u007F（也是127）
 
 ## 二、String
-String是final类型的类，无法被继承。Java8中使用char数组存储String。Java9使用byte数组，并且使用coder标识编码类型。类型中的value数组也是final类型的，初始化后不能再引用其他数组，并且String类内部也无法改变value，所以可以保证String是不可变的。
+String是final类型的类，无法被继承。Java8中使用char数组存储String。Java9使用byte数组，并且使用coder标识编码类型。类型中的value数组也是final类型的，初始化后不能再引用其他数组，并且String类内部也无法改变value，所以可以保证String是不可变的。（注意：final修饰的数组是可变的，只是对象不能变，对象内部可变）
 
 ### 优点
 1. String的hash值也不会变，可以用作HashMap的key
@@ -51,8 +51,8 @@ String不可变
 StringBuffer、StringBuilder可变
 2. 线程安全
 String安全
-StringBuffer不安全
-StringBuilder使用了synchronized，线程安全
+StringBuilder不安全
+StringBuffer使用了synchronized，线程安全
 
 ### String Pool
 new String("abc")不会把创建新对象放在String Pool中，而是放在堆中；String对象的intern方法会在StringPool中寻找是否存在对象（使用equals），不存在则在String Pool中新建，并返回地址。```String s2 = s1.intern();```。
