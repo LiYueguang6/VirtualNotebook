@@ -116,7 +116,7 @@ jedis提供了比较全面的对redis命令的支持。仅支持基本数据类�
 A.redis自带锁set  nx（只有不存在时才写入），因为锁是基于kv插入的，应用在具体业务上依然会产生并发问题，用redisson
 B.redisson框架（可以理解为jedis+juc）结合apach压测
 
-``````java
+```java
 Jedis jedis = redisUtil.getJedis();
 RLock lock = redissonClient.getLock("lock");// 声明锁
 lock.lock();//上锁
@@ -130,4 +130,4 @@ try {
 	jedis.close();
 	lock.unlock();// 解锁
 }
-``````
+```
