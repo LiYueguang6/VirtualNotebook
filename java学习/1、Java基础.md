@@ -51,7 +51,7 @@ String不可变
 StringBuffer、StringBuilder可变
 2. 线程安全
 String安全
-StringBuilder不安全
+StringBuilder不安全，单线程作为StringBuffer的单线程替代
 StringBuffer使用了synchronized，线程安全
 
 ### String Pool

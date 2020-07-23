@@ -2,7 +2,7 @@
 
 ### 基本数据类型
 
-String、List、Set、Hash、Zset
+String、List、Set（无序集合，不能重复）、Hash（不能重复）、Zset（有序name-score集合，name不能重复）
 
 ### Redis和MySQL同步数据
 

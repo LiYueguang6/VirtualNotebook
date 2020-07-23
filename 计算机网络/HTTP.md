@@ -4,7 +4,7 @@
 
 ## Cookie和Session
 
-复杂数据首选Session，Cookie只能存ascii码。隐私数据存在cookie中可以先加密，再通过服务器解密。不应该将用户所有信息存在Session中，开销大
+复杂数据首选Session，Cookie只能存ascii码。隐私数据存在cookie中可以先加密，再通过服务器解密。不应该将用户所有信息存在Session中，开销大。浏览器一般对cookie的大小有限制。
 
 ## get和post
 

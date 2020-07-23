@@ -4,7 +4,7 @@
 
 #{}是预编译处理，${}是字符串替换。
 
-Mybatis在处理#{}时，会将sql中的#{}替换为?号，调用PreparedStatement的set方法来赋值；
+Mybatis在处理#{}时，会将sql中的#{}替换为?号，调用PreparedStatement的set方法来赋值；（set会检查注入的值的语法正确性，以及对引号进行转义，防止参数成为查询条件的一部分）
 
 Mybatis在处理\${}时，就是把\${}替换成变量的值。
 
