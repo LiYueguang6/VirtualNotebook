@@ -8,6 +8,8 @@ from on join where group rollup having select distinct orderby limit
 
 ## SQL优化
 
+#### explain详解
+
 id:选择标识符
 
 select_type:表示查询的类型。
