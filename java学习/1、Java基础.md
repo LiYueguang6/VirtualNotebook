@@ -26,7 +26,7 @@ int y = x; // 拆箱
 new Integer(123);和Integer.valueOf(123)的区别在于：
 * new Integer(123);每次会新建一个对象。
 * Integer.valueOf(123)会使用缓冲池中的对象。
-装箱过程中自动调用valueOf。
+**装箱**过程中自动调用valueOf。
 
 引用同一个对象的包装类，==时相同，equals
 
@@ -55,13 +55,16 @@ StringBuilder不安全，单线程作为StringBuffer的单线程替代
 StringBuffer使用了synchronized，线程安全
 
 ### String Pool
+
+**独立**在堆内存空间外
+
 new String("abc")不会把创建新对象放在String Pool中，而是放在堆中；String对象的intern方法会在StringPool中寻找是否存在对象（使用equals），不存在则在String Pool中新建，并返回地址。```String s2 = s1.intern();```。
 
 ```java
 String s = "abc";
 ```
 
-这种方式创建的String，先去String Pool中匹配相应的对象，不存在则新建对象。
+这种方式创建的String，先去String Pool中匹配相应的对象，不存在则在StringPool新建对象。
 
 ## 三、==和equals
 

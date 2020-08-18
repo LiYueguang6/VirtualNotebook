@@ -7,7 +7,7 @@ Spring实现了IoC控制反转，或者说依赖注入DI，是一个问题的两
 
 AOP切面编程的话，即比如说是将每模块的日志、权限、业务抽象出来，按功能统一进行划分，就是切面。减少了代码的冗余，提高了代码复用。
 
-Spring的建立在反射机制之上 。
+Spring的IoC建立在反射机制之上 。
 
 ## Spring的优点
 1.降低了组件之间的耦合性 ，实现了软件各层之间的解耦   
@@ -68,13 +68,13 @@ Spring给Bean的生命周期提供的扩展功能非常多
 
 ## Spring常用注解
 
+SpringBoot的启动类注解：@SpringBootApplication
+
 第一部分
 
 @Controller 标注Controller组件
 
 @Service 标注业务层组件
-
-
 
 第二部分
 
