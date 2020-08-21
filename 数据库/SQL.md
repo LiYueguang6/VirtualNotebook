@@ -1,5 +1,25 @@
 # SQL
 
+## SQL执行过程
+
+1.解析sql语句，生成查询计划
+
+2.检查是否存在已经生成的查询计划（避免多次编译）
+
+3.检查缓冲区的数据是否满足需求
+
+4.没有查询计划则检查语法语义
+
+5.加锁
+
+6.检查权限
+
+7.优化SQL
+
+8.保存到SQL计划缓存中
+
+9.执行SQL
+
 ## SQL执行顺序
 
 from on join where group rollup having select distinct orderby limit
