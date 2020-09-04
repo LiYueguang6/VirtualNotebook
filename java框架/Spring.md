@@ -35,7 +35,7 @@ aop框架具有的两个特征：
 1. 各个步骤之间的良好隔离性 
 2. 源代码无关性 
 
-Spring的事务管理机制实现的原理，就是通过这样一个动态代理对所有需要事务管理的Bean进行加载，并根据配置在invoke方法中对当前调用的 方法名进行判定，并在method.invoke方法前后为其加上合适的事务管理代码，这样就实现了Spring式的事务管理。Spring中的AOP实 现更为复杂和灵活，不过基本原理是一致的。
+Spring的**事务管理机制**实现的原理，就是通过这样一个动态代理对所有需要事务管理的Bean进行加载，并根据配置在invoke方法中对当前调用的 方法名进行判定，并在method.invoke方法前后为其加上合适的事务管理代码，这样就实现了Spring式的事务管理。Spring中的AOP实 现更为复杂和灵活，不过基本原理是一致的。
 ## IOC
 什么是DI机制？  
 依赖注入（Dependecy Injection）和控制反转（Inversion of Control）是同一个概念，具体的讲：当某个角色需要另外一个角色协助的时候，在传统的程序设计过程中，通常由调用者来创建被调用者的实例。但在spring中创建被调用者的工作不再由调用者来完成，因此称为控制反转。创建被调用者的工作由spring来完成，然后注入调用者 
@@ -43,6 +43,35 @@ Spring的事务管理机制实现的原理，就是通过这样一个动态代�
 spring以动态灵活的方式来管理对象 ， 注入的两种方式，设值注入和构造注入。 
 设值注入的优点：直观，自然 
 构造注入的优点：可以在构造器中决定依赖关系的顺序。
+
+## 事务
+
+ACID
+
+[事务]: https://www.cnblogs.com/mseddl/p/11577846.html
+
+### 事务配置
+
+1.编程式事务：（侵入式）使用TransactionTemplate和直接使用PlatformTransactionManager（配置bean时）。通过显式的写execute和status.setRollbackOnly()进行执行或者回滚。
+
+2.声明式事务：通过AOP（或注解@Transactional）在方法执行前后加入事务的开始和提交回滚。作用到方法级别。
+
+### 传播机制
+
+- PROPAGATION_REQUIRED propagation_required
+	Spring**默认**的传播机制，能满足绝大部分业务需求，如果外层有事务，则当前事务加入到外层事务，一块提交，一块回滚。如果外层没有事务，新建一个事务执行
+- PROPAGATION_REQUES_NEW
+	该事务传播机制是每次都会新开启一个事务，同时把外层事务挂起，当当前事务执行完毕，恢复上层事务的执行。如果外层没有事务，执行当前新开启的事务即可
+- PROPAGATION_SUPPORT
+	如果外层有事务，则加入外层事务，如果外层没有事务，则直接使用非事务方式执行。完全依赖外层的事务
+- PROPAGATION_NOT_SUPPORT
+	该传播机制不支持事务，如果外层存在事务则挂起，执行完当前代码，则恢复外层事务，无论是否异常都不会回滚当前的代码
+- PROPAGATION_NEVER never
+	该传播机制不支持外层事务，即如果外层有事务就抛出异常
+- PROPAGATION_MANDATORY mandatory
+	与NEVER相反，如果外层没有事务，则抛出异常
+- PROPAGATION_NESTED nested
+	该传播机制的特点是可以保存状态保存点，当前事务回滚到某一个点，从而避免所有的嵌套事务都回滚，即各自回滚各自的，如果子事务没有把异常吃掉，基本还是会引起全部回滚的。
 
 ## Spring、SpringBoot和Spring Cloud
 
@@ -52,7 +81,11 @@ SpringMVC是基于Spring的一个 MVC 框架
 SpringBoot基于Spring的一套快速开发整合包（简言之就是让搭建SpringMVC的过程更简单了，配置简单，也提供了很多常用工具）
 Spring Cloud是基于Spring的一整套解决方案——服务注册与发现，服务消费，服务保护与熔断，网关，分布式调用追踪，分布式配置管理等（对标Dubbo）
 
-## Bean生命周期
+## Bean
+
+### BeanFactory
+
+### Bean生命周期
 
 实例化
 
@@ -68,7 +101,7 @@ Spring给Bean的生命周期提供的扩展功能非常多
 
 ## Spring常用注解
 
-SpringBoot的启动类注解：@SpringBootApplication
+SpringBoot的**启动**类注解：@SpringBootApplication
 
 第一部分
 
