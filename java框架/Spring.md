@@ -48,6 +48,8 @@ spring以动态灵活的方式来管理对象 ， 注入的两种方式，设值
 
 ACID
 
+也是基于mysql
+
 [事务]: https://www.cnblogs.com/mseddl/p/11577846.html
 
 ### 事务配置
@@ -79,7 +81,7 @@ Spring是整个生态，主要依存于SSH框架（Struts+Spring+Hibernate数据
 Spring framework是
 SpringMVC是基于Spring的一个 MVC 框架
 SpringBoot基于Spring的一套快速开发整合包（简言之就是让搭建SpringMVC的过程更简单了，配置简单，也提供了很多常用工具）
-Spring Cloud是基于Spring的一整套解决方案——服务注册与发现，服务消费，服务保护与熔断，网关，分布式调用追踪，分布式配置管理等（对标Dubbo）
+Spring Cloud是基于Spring的一整套解决方案——服务注册与发现，服务消费，服务保护与熔断，网关，分布式调用追踪，分布式配置管理等（对标Dubbo，不过dubbo是rpc框架，spring cloud基于http的restful框架）
 
 ## Bean
 
