@@ -28,11 +28,11 @@ from on join where group rollup having select distinct orderby limit
 
 1. 左连接 left join
 
-	左边的表无限制
+	除了符合条件的数据被查询到之外，左边的表也会被查询出来，对应右表的属性位置值为null
 
 2. 右链接 right join
 
-	右边的表无限制
+	除了符合条件的数据被查询到之外，右边的表也会被查询出来，对应左表的属性位置值为null
 
 3. 内连接 inner join/join
 
@@ -44,7 +44,7 @@ from on join where group rollup having select distinct orderby limit
 
 5. 全外连接 full join（mysql不存在）
 
-  两张表都不加限制
+	两张表都不加限制
 
 ## 查询步骤
 
