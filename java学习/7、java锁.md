@@ -38,6 +38,8 @@
 
 ### 2.2 monitor对象
 
+java对象上重量级锁以后，对象头指向monitor，monitor的owner字段存放拥有者的线程id。
+
 ## 三、重量级锁的升级过程
 
 ### 3.1 偏向锁
@@ -65,3 +67,7 @@
 升级到重量级锁，对象头中写入指向monitor互斥量的指针。monitor则保存着锁拥有者的信息。重量级锁的更新就是monitor对象的更新。
 
 ## 四、Synchronized和ReentrantLock
+
+ReentrantLock
+
+AQS
